@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>Sumadoc</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\accept.png" />
+    <None Remove="Images\chevron.png" />
+    <None Remove="Images\female.png" />
+    <None Remove="Images\Honeyview_pill2.png" />
+    <None Remove="Images\male.png" />
+    <None Remove="Images\pill.png" />
+    <None Remove="Images\reject.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignColors" Version="2.0.1" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.1.0" />
+    <PackageReference Include="MaterialDesignThemes.MahApps" Version="0.1.7" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Api class library\DomZdravljaCL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DomZdravljaCL">
+      <HintPath>..\..\..\..\DomZdravljaCL\obj\Debug\net5.0\DomZdravljaCL.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\accept.png" />
+    <Resource Include="Images\chevron.png" />
+    <Resource Include="Images\female.png" />
+    <Resource Include="Images\male.png" />
+    <Resource Include="Images\pill.png" />
+    <Resource Include="Images\reject.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Style\PacijentMenuButtonStyle.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

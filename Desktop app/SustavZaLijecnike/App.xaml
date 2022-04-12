@@ -1,0 +1,22 @@
+﻿<Application x:Class="SustavZaLijecnike.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:SustavZaLijecnike"
+             Startup="Application_Startup">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Indigo.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+                <ResourceDictionary Source="Style/MenuButtonStyle.xaml"/>
+                <ResourceDictionary Source="Style/PacijentMenuButtonStyle.xaml"/>
+                <ResourceDictionary Source="Style/TextBoxStyle.xaml"/>
+                <ResourceDictionary Source="Style/ScrollBarStyle.xaml"/>
+                <ResourceDictionary Source="Style/ZahtjevButtonHoverStyle.xaml"/>
+                <ResourceDictionary />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

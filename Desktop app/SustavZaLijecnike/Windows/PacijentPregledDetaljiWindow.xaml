@@ -1,0 +1,116 @@
+﻿<Window x:Class="SustavZaLijecnike.Windows.PacijentPregledDetaljiWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SustavZaLijecnike.Windows"
+        mc:Ignorable="d"
+        Title="PacijentPregledWindow" 
+        Width="500"
+        Height="400" 
+        MinWidth="500"
+        MinHeight="450"
+        Background="White"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        MouseDown="Window_MouseDown"
+        ShowInTaskbar="False">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="80" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock 
+                Text="Detalji pregleda"
+                FontSize="30"
+                FontFamily="Segoe UI"/>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+            <TextBlock
+                Text="Liječnik: "
+                FontWeight="DemiBold"
+                FontSize="16"
+                FontFamily="Segoe UI"/>
+            <TextBlock
+                x:Name="tbLijecnik"
+                Text="Brat Bratic"
+                FontSize="16"
+                FontFamily="Segoe UI"/>
+        </StackPanel>
+        <Rectangle Grid.Row="2" Grid.Column="1" VerticalAlignment="Top" Fill="#ccc" Height="1"/>
+
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+            <TextBlock
+                Text="Datum pregleda: "
+                FontWeight="DemiBold"
+                FontSize="16"
+                FontFamily="Segoe UI"/>
+            <TextBlock
+                x:Name="tbDatum"
+                Text="22.2.2022"
+                FontSize="16"
+                FontFamily="Segoe UI"/>
+        </StackPanel>
+        <Rectangle Grid.Row="3" Grid.Column="1" VerticalAlignment="Top" Fill="#ccc" Height="1"/>
+
+        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center">
+            <TextBlock
+                Text="Dijagnoza: "
+                FontWeight="DemiBold"
+                FontSize="16"
+                FontFamily="Segoe UI"/>
+            <TextBlock
+                x:Name="tbDijagnoza"
+                Text="Ostale crijevne bolesti uzrokovane protozoima"
+                FontSize="16"
+                FontFamily="Segoe UI"/>
+        </StackPanel>
+        <Rectangle Grid.Row="4" Grid.Column="1" VerticalAlignment="Top" Fill="#ccc" Height="1"/>
+
+        <StackPanel Grid.Row="4" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center">
+            <TextBlock
+                Text="Napomena: "
+                FontWeight="DemiBold"
+                FontSize="16"
+                FontFamily="Segoe UI"/>
+            <TextBlock
+                x:Name="tbNapomena"
+                Text="Bol u trbuhu"
+                FontSize="16"
+                FontFamily="Segoe UI"
+                TextWrapping="Wrap"/>
+        </StackPanel>
+        <Rectangle Grid.Row="4" Grid.Column="1" VerticalAlignment="Top" Fill="#ccc" Height="1"/>
+
+        <StackPanel 
+            Grid.Row="5" 
+            Grid.Column="1" 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Orientation="Horizontal">
+            <Button 
+                x:Name="btnZatvori"
+                Content="Zatvori"
+                Click="btnZatvori_Click"
+                Width="100"
+                Height="38"
+                FontSize="16"
+                Margin="10"
+                Style="{StaticResource MaterialDesignOutlinedButton}"/>
+        </StackPanel>
+    </Grid>
+</Window>

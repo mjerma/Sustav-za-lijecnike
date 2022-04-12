@@ -1,0 +1,88 @@
+﻿<Window x:Class="SustavZaLijecnike.Windows.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:SustavZaLijecnike.Windows"
+        mc:Ignorable="d"
+        Title="Sumadoc" 
+        FontFamily="Segoe UI"
+        WindowStartupLocation="CenterScreen"
+        d:DesignHeight="720" d:DesignWidth="1280">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.3,0" EndPoint="1,1">
+                <GradientStop Color="White" Offset="1" />
+                <GradientStop Color="#FF3F4AB5" Offset="0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Border Height="390"
+                VerticalAlignment="Center" 
+                CornerRadius="0 0 180 0" 
+                Background="#100E17"/>
+
+        <StackPanel Orientation="Horizontal" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center">
+            <StackPanel Width="220">
+                <materialDesign:PackIcon 
+                    Kind="HospitalBox"
+                    Foreground="White" 
+                    Width="200" 
+                    Height="210"/>
+            </StackPanel>
+            <StackPanel Width="350">
+                <StackPanel Height="261">
+                    <TextBlock Text="Prijava korisnika" 
+                               Margin="20" 
+                               Foreground="White" 
+                               TextAlignment="Center" 
+                               FontSize="38" 
+                               FontFamily="Segoe UI"/>
+                    <StackPanel Orientation="Horizontal" 
+                                Margin="10">
+                        <materialDesign:PackIcon 
+                            Kind="User" 
+                            Width="25" 
+                            Height="25" 
+                            Foreground="White"/>
+                        <TextBox x:Name="tbKorisnickoIme" 
+                                 Margin="10 0" 
+                                 materialDesign:HintAssist.Hint="Unesite korisničko ime" 
+                                 Foreground="White" 
+                                 Width="250" 
+                                 BorderBrush="White" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" 
+                                Margin="10">
+                        <materialDesign:PackIcon 
+                            Kind="Lock" 
+                            Width="25" 
+                            Height="25" 
+                            Foreground="White"/>
+                        <PasswordBox x:Name="pbLozinka" 
+                                     Margin="10 0" 
+                                     materialDesign:HintAssist.Hint="********" 
+                                     Foreground="White" 
+                                     Width="250" 
+                                     BorderBrush="White"  />
+                    </StackPanel>
+                    <StackPanel 
+                            Margin="10" 
+                            HorizontalAlignment="Center">
+                        <Button x:Name="btnPrijava" 
+                                Click="btnPrijava_Click"
+                                Width="100" 
+                                Height="40" 
+                                Style="{StaticResource MaterialDesignRaisedButton}" 
+                                materialDesign:ButtonAssist.CornerRadius="1" 
+                                BorderThickness="2"
+                                ToolTip="Login" 
+                                Content="Prijavi se"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

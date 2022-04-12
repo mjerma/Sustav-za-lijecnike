@@ -1,0 +1,76 @@
+﻿<Page x:Class="SustavZaLijecnike.Pages.PacijentiPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:local="clr-namespace:SustavZaLijecnike.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PacijentiPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="50" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel 
+            Grid.Column="1" 
+            VerticalAlignment="Center"
+            HorizontalAlignment="Left"
+            Margin="0 20 0 0"
+            Width="200">
+            <TextBox 
+                x:Name="tbSearch"
+                TextChanged="tbSearch_TextChanged"
+                Background="#FAFAFA"
+                materialDesign:HintAssist.Hint="Pretraživanje"
+                materialDesign:HintAssist.FloatingScale="-0.02"
+                FontSize="16"
+                BorderThickness="0.5"
+                Height="30"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"    />
+        </StackPanel>
+
+        <Button 
+            Content="Dodaj pacijenta"
+            x:Name="btnDodajPacijenta"
+            Click="btnDodajPacijenta_Click"
+            Width="135"
+            Height="35"
+            HorizontalAlignment="Right"
+            Grid.Column="1"
+            Margin="0 20 0 0"
+            Style="{StaticResource MaterialDesignFlatMidBgButton}"/>
+        <DataGrid 
+            x:Name="dgPacijenti"
+            IsReadOnly="True"
+            ColumnWidth="*"
+            BorderThickness="1"
+            AutoGenerateColumns="False"
+            Style="{StaticResource MaterialDesignDataGrid}"
+            Grid.Row="1"
+            Grid.Column="1"
+            FontFamily="{StaticResource MaterialDesignFont}">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="Ime" Header="Ime" Binding="{Binding Ime}"/>
+                <DataGridTextColumn Header="Prezime" Binding="{Binding Prezime}"/>
+                <DataGridTextColumn Header="Datum upisa" Binding="{Binding DatumUpisa, StringFormat=\{0:dd.MM.yyyy\}}"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Width="75" Height="27" Content="Detalji" Click="rowButton_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

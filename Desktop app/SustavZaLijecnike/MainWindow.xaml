@@ -1,0 +1,106 @@
+﻿<Window x:Class="SustavZaLijecnike.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SustavZaLijecnike"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Sumadoc" 
+        Height="720" Width="1280"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Border Background="#272537">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="75"/>
+                    <RowDefinition/>
+                    <RowDefinition Height="75"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel
+                     VerticalAlignment="Center"
+                    HorizontalAlignment="Left"
+                    Orientation="Horizontal">
+
+                    <TextBlock Text="Sumadoc"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Foreground="White"
+                       FontSize="22"
+                       Margin="20 0 5 0" />
+
+                    <materialDesign:PackIcon 
+                    Kind="HospitalBox" 
+                    Foreground="White"
+                    Width="30" 
+                    Height="30" 
+                    Margin="0 0 20 0"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1">
+
+                    <RadioButton Content="Pacijenti"
+                             x:Name="RbPacijenti"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonStyle}"
+                             Checked="RadioButton_Checked"
+                             IsChecked="True"/>
+
+
+                    <RadioButton Content="Narudžbe"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonStyle}"
+                             Checked="RadioButton_Checked"/>
+                    <RadioButton Content="Termini"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonStyle}"
+                             Checked="RadioButton_Checked"/>
+                </StackPanel>
+
+                <Button
+                    x:Name="btnOdjava"
+                    Click="btnOdjava_Click"
+                    Grid.Row="3"
+                    Background="#272537"
+                    Padding="-50 0 0 0"
+                    Height="50"
+                    FontWeight="Normal"
+                    BorderThickness="0"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth0">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Odjava" 
+                               Foreground="White" />
+                        <materialDesign:PackIcon 
+                                VerticalAlignment="Center"
+                                Kind="Logout" 
+                                Foreground="White"/>
+                    </StackPanel>
+                </Button>
+
+                <ScrollViewer
+                    Background="#eceff1"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    Grid.RowSpan="3"
+                    PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
+                    <Frame
+                    x:Name="MainFrame"
+                    Source="Pages/PacijentiPage.xaml"
+                    NavigationUIVisibility="Hidden"/>
+                </ScrollViewer>
+            </Grid>
+        </Border>
+
+    </Grid>
+</Window>

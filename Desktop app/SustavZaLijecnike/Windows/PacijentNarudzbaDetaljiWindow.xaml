@@ -1,0 +1,136 @@
+﻿<Window x:Class="SustavZaLijecnike.Windows.PacijentNarudzbaDetaljiWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SustavZaLijecnike.Windows"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="PacijentNarudzbaDetailsWindow" 
+        Width="520"
+        Height="480" 
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80" />
+            <ColumnDefinition/>
+            <ColumnDefinition Width="80" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock 
+                Text="Narudžba recepta"
+                FontSize="30"
+                FontFamily="Segoe UI"/>
+        </StackPanel>
+
+        <StackPanel 
+            Grid.Row="1" 
+            Grid.Column="1" 
+            VerticalAlignment="Center">
+
+            <TextBlock
+                Text="Lijek: "
+                FontSize="16"
+                FontFamily="Segoe UI"/>
+            <ComboBox 
+                x:Name="cbLijek"
+                IsEditable="True" 
+                IsReadOnly="True"/>
+        </StackPanel>
+
+        <StackPanel 
+            Grid.Row="2" 
+            Grid.Column="1"  
+            VerticalAlignment="Center">
+            <TextBlock
+                Text="Dijagnoza: "
+                FontSize="16"
+                FontFamily="Segoe UI"/>
+            <ComboBox 
+                x:Name="cbDijagnoza"
+                IsEditable="True" 
+                IsReadOnly="True"/>
+        </StackPanel>
+
+        <StackPanel 
+            Grid.Row="3" 
+            Grid.Column="1"  
+            VerticalAlignment="Center">
+            <TextBlock
+                Text="Datum narudžbe: "
+                FontSize="16"
+                FontFamily="Segoe UI"/>
+            <DatePicker 
+                x:Name="dpDatum"/>
+        </StackPanel>
+
+        <StackPanel 
+            Grid.Row="4" 
+            Grid.Column="1" 
+            Orientation="Vertical" 
+            VerticalAlignment="Center">
+            <TextBlock
+                Text="Napomena: "
+                FontSize="16"
+                FontFamily="Segoe UI"/>
+            <TextBox 
+                x:Name="tbNapomena"
+                Text=""
+                FontSize="12"
+                MaxLength="250"
+                TextWrapping="Wrap"/>
+        </StackPanel>
+
+        <StackPanel 
+            Grid.Row="5" 
+            Grid.Column="1"  
+            VerticalAlignment="Center"
+            Orientation="Horizontal">
+            <TextBlock
+                Text="Ponavljajući: "
+                FontSize="16"
+                FontFamily="Segoe UI"/>
+            <CheckBox 
+                x:Name="chbPonavljajuci"
+                Margin="5 3 0 0 "/>
+        </StackPanel>
+
+        <StackPanel 
+            Grid.Row="7" 
+            Grid.Column="1" 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Orientation="Horizontal">
+            <Button 
+                x:Name="btnOdustani"
+                Content="Odustani"
+                Click="btnOdustani_Click"
+                Width="100"
+                Height="35"
+                FontSize="16"
+                Margin="10"
+                Style="{StaticResource MaterialDesignOutlinedButton}"/>
+            <Button 
+                x:Name="btnSpremi"
+                Content="Spremi"
+                Click="btnSpremi_Click"
+                Width="100"
+                Height="35"
+                FontSize="16"
+                Margin="10"/>
+        </StackPanel>
+    </Grid>
+</Window>

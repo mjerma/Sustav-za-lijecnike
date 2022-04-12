@@ -1,0 +1,254 @@
+﻿<Page x:Class="SustavZaLijecnike.Pages.PacijentUrediPodatkePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SustavZaLijecnike.Pages" 
+      xmlns:c="clr-namespace:SustavZaLijecnike.ValidationRules"
+      mc:Ignorable="d" 
+      Width="650"
+      Height="550" 
+      MinWidth="600"
+      MinHeight="580"
+      Title="PacijentUrediPodatkePage"
+      Background="White"
+      DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="80" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock 
+                Text="Uredi podatke"
+                FontSize="30"
+                FontFamily="Segoe UI"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock 
+                Text="Ime"
+                FontSize="16" />
+            <TextBox 
+                x:Name="tbIme"
+                FontSize="16" 
+                VerticalContentAlignment="Center">
+                <TextBox.Text>
+                    <Binding Path="Ime"  UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <c:LettersOnlyRule />
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="3" VerticalAlignment="Center">
+            <TextBlock 
+                Text="Prezime"
+                FontSize="16" />
+            <TextBox 
+                x:Name="tbPrezime"
+                FontSize="16">
+                <TextBox.Text>
+                    <Binding Path="Prezime"  UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <c:LettersOnlyRule />
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock 
+                Text="Datum rođenja"
+                FontSize="16" />
+            <DatePicker 
+                x:Name="dpDatumRodenja"
+                FontSize="16" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="3" VerticalAlignment="Center">
+            <TextBlock 
+                Text="Spol"
+                FontSize="16" />
+            <ComboBox 
+                x:Name="cbSpol"
+                FontSize="16"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock 
+                Text="Ulica"
+                FontSize="16" />
+            <TextBox 
+                x:Name="tbUlica"
+                FontSize="16" >
+                <TextBox.Text>
+                    <Binding Path="Ulica"  UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <c:LettersNumbersOnlyRule />
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="3" VerticalAlignment="Center">
+            <TextBlock 
+                Text="Grad"
+                FontSize="16" />
+            <TextBox 
+                x:Name="tbGrad"
+                FontSize="16" >
+                <TextBox.Text>
+                    <Binding Path="Grad"  UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <c:LettersOnlyRule />
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock 
+                Text="Telefon"
+                FontSize="16" />
+            <TextBox 
+                x:Name="tbTelefon"
+                FontSize="16" >
+                <TextBox.Text>
+                    <Binding Path="Telefon"  UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <c:NumberOnlyRule />
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4" Grid.Column="3" VerticalAlignment="Center">
+            <TextBlock 
+                Text="Email"
+                FontSize="16" />
+            <TextBox 
+                x:Name="tbEmail"
+                FontSize="16" >
+                <TextBox.Text>
+                    <Binding Path="Email"  UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <c:EmailRule />
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5" Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock 
+                Text="Matični broj"
+                FontSize="16" />
+            <TextBox 
+                x:Name="tbMaticniBroj"
+                FontSize="16"
+                MaxLength="10">
+                <TextBox.Text>
+                    <Binding Path="MaticniBroj"  UpdateSourceTrigger="PropertyChanged">
+                        <Binding.ValidationRules>
+                            <c:MaticniBrojRule />
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5" Grid.Column="3" VerticalAlignment="Center">
+            <TextBlock 
+                Text="Status"
+                FontSize="16" />
+            <ComboBox 
+                FontSize="16"
+                x:Name="cbStatus"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" VerticalAlignment="Center">
+            <TextBlock 
+                Text="Liječnik"
+                FontSize="16" />
+            <ComboBox 
+                x:Name="cbLijecnik"/>
+        </StackPanel>
+
+        <StackPanel 
+            Grid.Row="8" 
+            Grid.Column="1" 
+            Grid.ColumnSpan="3" 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Orientation="Horizontal">
+            <Button 
+                x:Name="btnOdustani"
+                Content="Odustani"
+                Click="btnOdustani_Click"
+                Width="100"
+                Height="38"
+                FontSize="16"
+                Margin="10"
+                Style="{StaticResource MaterialDesignOutlinedButton}"/>
+            <Button 
+                x:Name="btnPromijeniLozinku"
+                Content="Promijeni lozinku"
+                Click="btnPromijeniLozinku_Click"
+                Width="168"
+                Height="38"
+                Margin="10"
+                FontSize="16" 
+                Style="{StaticResource MaterialDesignOutlinedButton}"/>
+            <Button 
+                x:Name="btnSpremi"
+                Content="Spremi"
+                Click="btnSpremi_Click"
+                Width="100"
+                Height="38"
+                Margin="10"
+                FontSize="16">
+                <Button.Style>
+                    <Style BasedOn="{StaticResource MaterialDesignFlatMidBgButton}" TargetType="Button">
+                        <Setter Property="IsEnabled" Value="False"/>
+                        <Style.Triggers>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding Path=(Validation.HasError), ElementName=tbIme}" Value="False"/>
+                                    <Condition Binding="{Binding Path=(Validation.HasError), ElementName=tbPrezime}" Value="False"/>
+                                    <Condition Binding="{Binding Path=(Validation.HasError), ElementName=tbUlica}" Value="False"/>
+                                    <Condition Binding="{Binding Path=(Validation.HasError), ElementName=tbGrad}" Value="False"/>
+                                    <Condition Binding="{Binding Path=(Validation.HasError), ElementName=tbTelefon}" Value="False"/>
+                                    <Condition Binding="{Binding Path=(Validation.HasError), ElementName=tbEmail}" Value="False"/>
+                                    <Condition Binding="{Binding Path=(Validation.HasError), ElementName=tbMaticniBroj}" Value="False"/>
+                                </MultiDataTrigger.Conditions>
+                                <Setter Property="IsEnabled" Value="True"/>
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>

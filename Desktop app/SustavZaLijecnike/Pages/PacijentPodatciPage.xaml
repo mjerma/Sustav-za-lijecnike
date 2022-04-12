@@ -1,0 +1,160 @@
+﻿<Page x:Class="SustavZaLijecnike.Pages.PacijentPodatciPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SustavZaLijecnike.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="800"
+      Title="PacijentPodatciPage"
+      Background="#FAFAFA"
+      FontSize="14">
+
+    <Border 
+            BorderBrush="Gray" 
+            BorderThickness="0.4">
+        <Grid  Margin="40 0 40 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="10"/>
+            </Grid.RowDefinitions>
+            
+            <TextBlock Text="Osnovni podatci" 
+                   FontSize="18"
+                   FontWeight="Bold" 
+                   Grid.Row="0" 
+                   VerticalAlignment="Center"/>
+            <Rectangle Grid.Row="1" VerticalAlignment="Top" Fill="#ccc" Height="1"/>
+
+            <TextBlock 
+            Foreground="#666666" 
+            FontWeight="SemiBold"
+            Text="Datum rođenja" 
+            Grid.Row="1" 
+            VerticalAlignment="Center"/>
+            <TextBlock 
+            x:Name="tbDatumRodenja"
+            Foreground="Black" 
+            FontWeight="SemiBold"
+            HorizontalAlignment="Right"
+            Text="28.1.1999" 
+            Grid.Row="1" 
+            VerticalAlignment="Center"/>
+            <Rectangle Grid.Row="2" VerticalAlignment="Top" Fill="#ccc" Height="1"/>
+
+            <TextBlock 
+            Foreground="#666666" 
+            FontWeight="DemiBold"
+            Text="Spol" 
+            Grid.Row="2" 
+            VerticalAlignment="Center"/>
+            <TextBlock
+            x:Name="tbSpol"
+            Foreground="Black" 
+            FontWeight="SemiBold"
+            HorizontalAlignment="Right"
+            Text="Muški" 
+            Grid.Row="2" 
+            VerticalAlignment="Center"/>
+            <Rectangle Grid.Row="3" VerticalAlignment="Top" Fill="#ccc" Height="1"/>
+
+            <TextBlock 
+            Foreground="#666666" 
+            FontWeight="DemiBold"
+            Text="Adresa" 
+            Grid.Row="3" 
+            VerticalAlignment="Center"/>
+            <TextBlock
+            x:Name="tbAdresa"
+            Foreground="Black" 
+            FontWeight="SemiBold"
+            HorizontalAlignment="Right"
+            Text="Ilica 15" 
+            Grid.Row="3" 
+            VerticalAlignment="Center"/>
+            <Rectangle Grid.Row="4" VerticalAlignment="Top" Fill="#ccc" Height="1"/>
+
+            <TextBlock 
+            Foreground="#666666" 
+            FontWeight="DemiBold"
+            Text="Grad" 
+            Grid.Row="4" 
+            VerticalAlignment="Center"/>
+            <TextBlock
+            x:Name="tbGrad"
+            Foreground="Black" 
+            FontWeight="SemiBold"
+            HorizontalAlignment="Right"
+            Text="Zagreb" 
+            Grid.Row="4" 
+            VerticalAlignment="Center"/>
+            <Rectangle Grid.Row="5" VerticalAlignment="Top" Fill="#ccc" Height="1"/>
+
+            <TextBlock 
+            Foreground="#666666" 
+            FontWeight="DemiBold"
+            Text="Telefon" 
+            Grid.Row="5" 
+            VerticalAlignment="Center"/>
+            <TextBlock 
+            x:Name="tbTelefon"
+            Foreground="Black" 
+            FontWeight="SemiBold"
+            HorizontalAlignment="Right"
+            Text="091 5440122" 
+            Grid.Row="5" 
+            VerticalAlignment="Center"/>
+            <Rectangle Grid.Row="6" VerticalAlignment="Top" Fill="#ccc" Height="1"/>
+
+            <TextBlock 
+            Foreground="#666666" 
+            FontWeight="DemiBold"
+            Text="Email" 
+            Grid.Row="6" 
+            VerticalAlignment="Center"/>
+            <TextBlock 
+            x:Name="tbEmail"
+            Foreground="Black" 
+            FontWeight="SemiBold"
+            HorizontalAlignment="Right"
+            Text="mirko.mirkovic@gmail.com" 
+            Grid.Row="6" 
+            VerticalAlignment="Center"/>
+            <Rectangle Grid.Row="7" VerticalAlignment="Top" Fill="#ccc" Height="1"/>
+
+            <TextBlock 
+            Foreground="#666666" 
+            FontWeight="DemiBold"
+            Text="Matični broj" 
+            Grid.Row="7" 
+            VerticalAlignment="Center"/>
+            <TextBlock 
+            x:Name="tbMaticniBroj"
+            Foreground="Black" 
+            FontWeight="SemiBold"
+            HorizontalAlignment="Right"
+            Text="123456789" 
+            Grid.Row="7" 
+            VerticalAlignment="Center"/>
+            <Rectangle Grid.Row="8" VerticalAlignment="Top" Fill="#ccc" Height="1"/>
+            <Button 
+            Content="Uredi podatke"
+            x:Name="btnUrediPodatke"
+            Click="btnUrediPodatke_Click"
+            Width="125"
+            Height="38"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            Grid.Row="8"
+            Style="{StaticResource MaterialDesignFlatMidBgButton}"/>
+        </Grid>
+    </Border>
+</Page>

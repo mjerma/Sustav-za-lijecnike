@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ShowAllFiles>false</ShowAllFiles>
+    <_LastSelectedProfileId>D:\Users\Elmiha\Desktop\OICAR update\Projekt\SustavZaLijecnike\SustavZaLijecnike\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Pages\NarudzbePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PacijentCijepljenjePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PacijentiPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PacijentPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PacijentPodatciPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PacijentPreglediPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PacijentPromijeniLozinkuPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PacijentTerapijaPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PacijentUputnicePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\PacijentUrediPodatkePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\TerapijaNarudzbaControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\TerapijaDatumControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\NoviPacijentWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\LoginWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\PacijentIzdavanjeUputnicaWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\PacijentNarudzbaDetaljiWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\PacijentIzdavanjeTerapijeWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\PacijentUnosPregledaWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\PacijentPovijestTerapija.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\PacijentPregledDetaljiWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\PacijentTerapijaDetaljiWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\PacijentUrediPodatkeWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\PacijentUnosCijepljenjaWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\ReceptNoviZahtjevWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Windows\ZakaziTerminWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\NarudzbePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PacijentCijepljenjePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PacijentiPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PacijentPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PacijentPodatciPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PacijentPreglediPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PacijentPromijeniLozinkuPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PacijentTerapijaPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PacijentUputnicePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\PacijentUrediPodatkePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\PacijentMenuButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\MenuButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\ScrollBarStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\TextBoxStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Style\ZahtjevButtonHoverStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\TerapijaNarudzbaControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\TerapijaDatumControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\NoviPacijentWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\LoginWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\PacijentIzdavanjeUputnicaWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\PacijentNarudzbaDetaljiWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\PacijentIzdavanjeTerapijeWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\PacijentUnosPregledaWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\PacijentPovijestTerapija.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\PacijentPregledDetaljiWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\PacijentTerapijaDetaljiWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\PacijentUrediPodatkeWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\PacijentUnosCijepljenjaWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\ReceptNoviZahtjevWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Windows\ZakaziTerminWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

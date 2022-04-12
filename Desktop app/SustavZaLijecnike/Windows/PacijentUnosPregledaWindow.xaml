@@ -1,0 +1,83 @@
+﻿<Window x:Class="SustavZaLijecnike.Windows.PacijentUnosPregledaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SustavZaLijecnike.Windows"
+        mc:Ignorable="d"
+        Title="PacijentNoviPregledWindow" 
+        Width="500"
+        Height="400" 
+        MinWidth="450"
+        MinHeight="350"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        MouseDown="Window_MouseDown"
+        ShowInTaskbar="False">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="80" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock 
+                Text="Novi pregled"
+                FontSize="30"
+                FontFamily="Segoe UI"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock 
+                Text="Dijagnoza"
+                FontSize="16" />
+            <ComboBox 
+                x:Name="cbDijagnoza"
+                IsEditable="True" 
+                IsReadOnly="True"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="1" VerticalAlignment="Center">
+            <TextBlock 
+                Text="Napomena"
+                FontSize="16" />
+            <TextBox 
+                x:Name="tbNapomena"
+                FontSize="12"
+                TextWrapping="Wrap"
+                MaxLength="250"/>
+        </StackPanel>
+
+        <StackPanel 
+            Grid.Row="4" 
+            Grid.Column="1" 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Orientation="Horizontal">
+            <Button 
+                x:Name="btnOdustani"
+                Content="Odustani"
+                Click="btnOdustani_Click"
+                Width="100"
+                FontSize="16"
+                Margin="10"
+                Style="{StaticResource MaterialDesignOutlinedButton}"/>
+            <Button 
+                x:Name="btnSpremi"
+                Click="btnSpremi_Click"
+                Content="Spremi"
+                Width="100"
+                Margin="10"
+                FontSize="16" />
+        </StackPanel>
+    </Grid>
+</Window>
